@@ -1,5 +1,5 @@
 {
-    "name": "denky-database",
+    "name": "denky-json-database",
     "version": "1.0.1",
     "description": "Um simples banco de dados em JSON com o foco em performance e simplicidade.",
     "main": "index.js",
