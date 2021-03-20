@@ -1,6 +1,6 @@
 {
-    "name": "json-enmap",
-    "version": "1.0.0",
+    "name": "denky-database",
+    "version": "1.0.1",
     "description": "Um simples banco de dados em JSON com o foco em performance e simplicidade.",
     "main": "index.js",
     "dependencies": {},
