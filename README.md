@@ -18,7 +18,7 @@ Obtenha ajuda em meu servidor do Discord: [clique aqui](https://discord.gg/bVWds
 
 ## Exemplo básico
 ```javascript
-const DatabaseManager = require('denky-json-database')
+const DatabaseManager = require('denky-database')
 
 //Essa será a varíavel que você usará para manipular a Database.
 const Database = new DatabaseManager('./banco.json')
