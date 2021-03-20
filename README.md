@@ -1,13 +1,17 @@
 ## Denky Database
 Um simples banco de dados em JSON com o foco em performance e simplicidade.
+
 Inspirado no [quick.db](https://www.npmjs.com/package/quick.db) e no [Enmap](https://www.npmjs.com/package/enmap).
+
 Eu tive essa ideia quando o meu bot Denky ainda usava Enmap pois eu não tinha alternativas leves ou gratuitas.
+
 Ideal para bots do Discord ou projetos que precisem guardar dados facilmente em key-value.
 
 ---
 
 ## Instalação e suporte
 Instale a database com `npm install denky-database`
+
 Obtenha ajuda em meu servidor do Discord: [clique aqui](https://discord.gg/bVWdscg)
 
 ---
@@ -39,6 +43,7 @@ Database.delete('website')
 
 ## Documentação
 > Interrogação (?) signfica que uma opção é opcional e já possui um valor atribuído por padrão.
+
 > Opções sem interrogação retornarão um erro dizendo que uma opção está faltando em tal metodo.
 
 - `Database#set(chave, valor)` **|** Cria ou altera uma chave com o valor específico
