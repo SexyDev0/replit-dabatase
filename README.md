@@ -44,7 +44,7 @@ Database.delete('website')
 ## Documentação
 > Interrogação (?) signfica que uma opção é opcional e já possui um valor atribuído por padrão.
 
-> Opções sem interrogação retornarão um erro dizendo que uma opção está faltando em tal metodo.
+> Opções sem interrogação retornarão um erro dizendo que uma opção está faltando em tal metódo.
 
 - `Database#set(chave, valor)` **|** Cria ou altera uma chave com o valor específico
   ```js
