@@ -111,7 +111,7 @@ Database.delete('website')
     
 - `Database#pull(chave, item)` **|** Remove um item de uma array
   ```js
-  Database.push('amigos', 'Darkness')
+  Database.pull('amigos', 'Darkness')
   ```
   - Tipos:
     - Chave: string | number
