@@ -36,7 +36,7 @@ class DenkyDatabase {
     //Geral
     set(nome, valor) {
         if(!nome) return this._throwMissing('nome', 'set')
-        if(!valor) return this._throwMissing('valor', 'set')
+        if(typeof valor == 'undefined') return this._throwMissing('valor', 'set')
         this.conteudo[nome] = valor
         this._escrever()
     }
