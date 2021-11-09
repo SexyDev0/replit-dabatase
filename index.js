@@ -1,48 +1,17 @@
 const fs = require('fs')
+const Database = require("@replit/database")
+const db = new Database()
 
-class DenkyDatabase {
-    constructor(local) {
-        if(!local) return this._throwMissing('local', 'criação de database')
-        if (!fs.existsSync(local)) fs.writeFileSync(local, '{"_denkyDatabaseVersion":2}');
-        this.conteudo;
-        this.local = local;
-        try {
-            this.conteudo = JSON.parse(fs.readFileSync(local));
-        } catch(e) {
-            throw new Error('Erro ao carregar banco de dados ' + e)
-        }
+class SexyDatabase {
+    constructor() {
+    set(name, value) {
+        if(!name) return this._throwMissing('name', 'set')
+        if(typeof value == 'undefined') return this._throwMissing('value', 'set')
+        db.set(name, value).then(() => {})
     }
 
-    //Listagem
-    get storage() {
-        return this.conteudo
-    }
-
-    all(modo = 'all') {
-        switch (modo) {
-            case 'all':
-                return Object.entries(this.conteudo);
-            case 'object':
-                return this.storage;
-            case 'keys':
-                return Object.keys(this.conteudo);
-            case 'values':
-                return Object.values(this.conteudo);
-            default:
-                throw new Error(`Tipo inválido no metódo all() Esperava all, object, keys, values porém foi recebido ${modo}.`);
-        }
-    }
-
-    //Geral
-    set(nome, valor) {
-        if(!nome) return this._throwMissing('nome', 'set')
-        if(typeof valor == 'undefined') return this._throwMissing('valor', 'set')
-        this.conteudo[nome] = valor
-        this._escrever()
-    }
-
-    delete(nome) {
-        if(!nome) return this._throwMissing('nome', 'delete')
+    delete(name) {
+        if(!name) return this._throwMissing('nome', 'delete')
         delete this.conteudo[nome]
         this._escrever()
     }
